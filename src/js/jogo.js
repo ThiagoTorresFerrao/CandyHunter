@@ -1,5 +1,5 @@
 // Sons do jogo
-const somPegar = new Audio('src/audio/perder.wav');
+const somPegar = new Audio('src/audio/pegar.wav');
 const somPerder = new Audio('src/audio/perder.wav');
 const somVencer = new Audio('src/audio/vencer.wav');
 const somGameOver = new Audio('src/audio/gameover.wav');
