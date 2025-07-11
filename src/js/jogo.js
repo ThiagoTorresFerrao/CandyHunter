@@ -1,3 +1,10 @@
+// Sons do jogo
+const somPegar = new Audio('src/audio/perder.wav');
+const somPerder = new Audio('src/audio/perder.wav');
+const somVencer = new Audio('src/audio/vencer.wav');
+const somGameOver = new Audio('src/audio/gameover.wav');
+
+let faseConcluida = false;
 let positionX;
 let positionY;
 const maxRows = 9; // Número máximo de linhas no tabuleiro
@@ -106,14 +113,19 @@ function verificarInteracoes() {
 
     if (itemPositionX == positionX && itemPositionY == positionY) {
       item.remove();
+      somPegar.play();
       itensColetados++;
       console.log(itensColetados);
-      if (itensColetados == (level * 3) - 1) {
-        console.log("itensColetados");
-        alert("Venceu playboy.\n" + moveSet + " movimentos.");
-        level++;
-        iniciarJogo();
-      }
+      if (itensColetados === (level * 3) - 1 && !faseConcluida) {
+  faseConcluida = true;
+  somVencer.play();
+  setTimeout(() => {
+    alert("Venceu playboy.\n" + moveSet + " movimentos.");
+    level++;
+    iniciarJogo();
+    faseConcluida = false; // desbloqueia novamente após iniciar a nova fase
+  }, 500);
+}
       itensElement.innerHTML = String(itensColetados);
     }
   });
@@ -125,10 +137,14 @@ function verificarInteracoes() {
 
     if (zombiePositionX == positionX && zombiePositionY == positionY) {
       vidas--;
+      somPerder.play();
       vidasElement.innerHTML = String(vidas);
       if (vidas == 0) {
-        alert("Perdeu playboy.\n" + moveSet + " movimentos.");
-        window.location.reload();
+        somGameOver.play();
+        setTimeout(() => {
+          alert("Perdeu playboy.\n" + moveSet + " movimentos.");
+          window.location.reload();
+        }, 500); // espera o som tocar
       }
     }
   });
@@ -230,3 +246,16 @@ function iniciarJogo() {
 }
 
 iniciarJogo();
+
+// Manual 
+
+document.getElementById("btnManual").addEventListener("click", function () {
+  const modal = document.getElementById("modalManual");
+  const textoManual = document.getElementById("textoManual");
+  textoManual.textContent = manualJogo;
+  modal.style.display = "flex";
+});
+
+function fecharModal() {
+  document.getElementById("modalManual").style.display = "none";
+}
