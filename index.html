@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="src/img/icon-halloween.png" type="image/x-icon">
+  <link rel="stylesheet" href="src/css/style.css">
+  <title>HALLOWEEN</title>
+</head>
+
+<body>
+  <div class="display">
+    <header>
+      <h1 id="username">Username</h1>
+      <h1>Vidas: <span id="vidas"></span></h1>
+      <h1>Nivel: <span id="nivel">00</span></h1>
+    </header>
+
+    <main class="playerPoint">
+      <img class="player">
+    </main>
+
+    <main id="board"></main>
+  </div>
+
+  <div id="escolhas">
+
+    <div id="userChoose"></div>
+
+    <nav>
+      <ul>
+        <li>
+          <input type="radio" name="persona" id="Jason" value="jason">
+          <label for="Jason">JASON</label>
+        </li>
+        <li>
+          <input type="radio" name="persona" id="Faixa" value="faixa">
+          <label for="Faixa">FAIXA</label>
+        </li>
+        <li>
+          <input type="radio" name="persona" id="Bozo" value="bozo">
+          <label for="Bozo">BOZO</label>
+        </li>
+        <li>
+          <input type="radio" name="persona" id="Witch" value="witch">
+          <label for="Witch">WITCH</label>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <script src="src/js/interface.js"></script>
+  <script src="src/js/jogo.js"></script>
+
+</body>
+
+</html>
