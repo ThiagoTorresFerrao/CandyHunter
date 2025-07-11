@@ -10,15 +10,15 @@
 }
 
 :root {
-  --cor-prima: #6E8C03;
+  --cor-prima: #414437;
   --cor-secun: #5A7302;
   --cor-terci: #2C4001;
-  --cor-cinCla: #8C8C8C;
+  --cor-cinCla: #5f5f5f;
   --cor-cinza: #404040;
   --cor-cinEsc: #0D0D0D;
-  --cor-azulCla: #9BB9BF;
-  --cor-azul: #0367A6;
-  --cor-azulEsc: #023E73;
+  --cor-azulCla: #859699;
+  --cor-azul: #224255;
+  --cor-azulEsc: #00325e;
 }
 
 ::-webkit-scrollbar{
