@@ -1,4 +1,4 @@
-# 🎃 Candy Hunter [Click here](https://thiagotorresferrao.github.io/**********)
+# 🎃 Candy Hunter [Click here](https://thiagotorresferrao.github.io/CandyHunter/)
 
 Um mini game temático de Halloween onde o jogador precisa **coletar doces e evitar zumbis**. Cada nível aumenta a dificuldade com mais inimigos e mais itens a coletar.
 

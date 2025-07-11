@@ -2,8 +2,8 @@ let positionX;
 let positionY;
 const maxRows = 9; // Número máximo de linhas no tabuleiro
 const maxColumns = 9; // Número máximo de colunas no tabuleiro
-let level = 1;
-let vidas = 4;
+let level = 1; // Número do level inicial
+let vidas = 4; // Número de vidas iniciais
 const zombies = [];
 let moveSet = 0;
 
